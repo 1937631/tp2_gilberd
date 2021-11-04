@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "target": "es2015",
+        "outDir": "./scripts",
+        "sourceMap": true,
+        "removeComments": true
+    },
+    "exclude": ["scripts"]
+}

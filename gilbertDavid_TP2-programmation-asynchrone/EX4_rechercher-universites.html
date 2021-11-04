@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recherche d'universités canadiennes - TP2</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Recherche d'universités canadiennes</h1>
+        </header>
+        <main>
+            <form
+                id="formRecherche"
+                action="#"
+                role="search"
+                aria-label="Rechercher une université"
+            >
+                <input
+                    id="rechercher"
+                    type="search"
+                    placeholder="Nom d'université"
+                    size="50"
+                    aria-label="Rechercher"
+                />
+
+                <button type="submit">Rechercher</button>
+            </form>
+
+            <p aria-live="polite" class="nombre-resultats">
+                <!-- Ajouter en JavaScript le nombre de résultats de recherche -->
+            </p>
+            <ul class="resultat-recherche">
+                <!-- Ajouter en JavaScript la liste d'universités -->
+                <!-- Voici le balidage attendu -->
+                <!-- 
+                    <li>
+                        <a href="http://www.ulaval.ca/" target="_blank"
+                            >Université Laval</a
+                        >
+                    </li>
+                    ...
+                -->
+            </ul>
+        </main>
+        <footer>
+            <small
+                >API:
+                <a
+                    href="https://github.com/Hipo/university-domains-list"
+                    target="_blank"
+                    >https://github.com/Hipo/university-domains-list</a
+                ></small
+            >
+        </footer>
+        <script src="scripts/EX4_rechercher-universites.js"></script>
+    </body>
+</html>
