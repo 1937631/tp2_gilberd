@@ -11,15 +11,11 @@ function montrerDate() {
     let heureString = heure.toString();
     let minString = minutes.toString();
     let secString = secondes.toString();
-
     heureString = heure < 10 ? '0' + heureString : heureString;
     minString = minutes < 10 ? '0' + minString : minString;
     secString = secondes < 10 ? '0' + secString : secString;
-
     let heureCourante = heureString + ':' + minString + ':' + secString;
-
     document.getElementById('horloge').innerHTML = heureCourante;
-
     let jourFr = '';
     let jourEn = '';
     let tableauJoursFr = [
@@ -70,36 +66,33 @@ function montrerDate() {
         'Novembre',
         'Décembre',
     ];
-
     jourFr = tableauJoursFr[jourSemaine];
     jourEn = tableauJoursEn[jourSemaine];
-
     moisFr = tableauMoisFr[mois];
     moisEn = tableauMoisEn[mois];
     let dateEcrite = '';
-    let langueSelectionnee = document.getElementById(
-        'selectLangue'
-    ) as HTMLSelectElement;
+    let langueSelectionnee = document.getElementById('selectLangue');
     if (langueSelectionnee.value == 'fr-CA') {
         dateEcrite =
             jourFr +
-            ' ' +
-            jourMois.toString() +
-            ' ' +
-            moisFr +
-            ' ' +
-            annee.toString();
-    } else {
+                ' ' +
+                jourMois.toString() +
+                ' ' +
+                moisFr +
+                ' ' +
+                annee.toString();
+    }
+    else {
         dateEcrite =
             jourEn +
-            ' ' +
-            moisEn +
-            ' ' +
-            jourMois.toString() +
-            ' ' +
-            annee.toString();
+                ' ' +
+                moisEn +
+                ' ' +
+                jourMois.toString() +
+                ' ' +
+                annee.toString();
     }
-
     document.getElementById('date').innerHTML = dateEcrite;
 }
 montrerDate();
+//# sourceMappingURL=EX3_horloge-numerique.js.map
