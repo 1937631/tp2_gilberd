@@ -101,5 +101,17 @@ function montrerDate() {
     }
 
     document.getElementById('date').innerHTML = dateEcrite;
+    let horloge = document.getElementById('horloge');
+    if (heure <= 20 && heure >= 5) {
+        horloge.classList.add('jour');
+        document.getElementById('date').classList.add('dateJour');
+        horloge.classList.remove('nuit');
+        document.getElementById('date').classList.remove('dateNuit');
+    } else {
+        horloge.classList.add('nuit');
+        document.getElementById('date').classList.add('dateNuit');
+        horloge.classList.remove('jour');
+        document.getElementById('date').classList.remove('dateJour');
+    }
 }
 montrerDate();

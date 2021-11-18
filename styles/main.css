@@ -244,3 +244,67 @@ form button[type='submit'] {
     max-width: 200px;
     border-radius: 8px;
 }
+
+@font-face {
+    font-family: clock;
+    src: url(../fonts/digitalmono.ttf);
+}
+.jour {
+    font-family: clock;
+    background-color: #e6e6e6;
+    font-size: 10em;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    color: #0f3166;
+    border-radius: 25px 25px 0px 0px;
+    margin-bottom: 0;
+    line-break: loose;
+}
+.nuit {
+    font-family: clock;
+    background-color: #0f3166;
+    font-size: 10em;
+    text-align: center;
+    padding: 20px 20px 0px 20px;
+    color: white;
+    border-radius: 25px 25px 0px 0px;
+    margin-bottom: 0;
+    line-break: loose;
+}
+.dateJour {
+    background-color: #e6e6e6;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 20px 30px 20px;
+    margin: 0;
+    border-radius: 0px 0px 25px 25px;
+    color: #0f3166;
+    font-weight: lighter;
+}
+.dateNuit {
+    background-color: #0f3166;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 20px 30px 20px;
+    margin: 0;
+    border-radius: 0px 0px 25px 25px;
+    color: white;
+    font-weight: lighter;
+}
+select {
+    margin-left: 40%;
+    margin-top: 20px;
+    width: 20%;
+    height: 40px;
+    text-align: center;
+    color: #0f3166;
+    background-color: #e6e6e6;
+    border: #0f3166 solid 2px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+@media (max-width: 675px) {
+    #horloge {
+        font-size: 3em;
+    }
+}
