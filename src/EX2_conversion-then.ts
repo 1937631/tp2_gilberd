@@ -35,4 +35,16 @@ const obtenirUniversiteUSA = () => {
         });
 };
 
+const obtenirUniversiteUSAAsync = async (): Promise<void> => {
+    try {
+        const reponse = await fetch(
+            'http://universities.hipolabs.com/search?country=United States'
+        );
+        const universites = (await reponse.json()) as Universite[];
+        afficherCinqPremiersResultats(universites);
+    } catch (erreur) {
+        console.error('Erreur: ', erreur);
+    }
+};
+
 obtenirUniversiteUSA();
