@@ -51,6 +51,7 @@ function reecrireDate() {
     let jourDate = date.getDate();
     let langueSelectionnee = document.getElementById('selectLangue');
     let local = langueSelectionnee.value;
+    document.getElementById('html').setAttribute('lang', local);
     let jourLangue = date.toLocaleString(local, { weekday: 'long' });
     let jourChiffreLangue = date.toLocaleString(local, { day: '2-digit' });
     let moisLangue = date.toLocaleString(local, { month: 'long' });
