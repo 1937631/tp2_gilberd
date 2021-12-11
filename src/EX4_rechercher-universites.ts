@@ -25,13 +25,37 @@ const refNombreResultats: HTMLUListElement = document.querySelector(
     '.nombre-resultats'
 ) as HTMLUListElement;
 
-const rechercherUniversitesCanadiennes = (recherche: string = '') => {
+const rechercherUniversitesCanadiennes = async (recherche: string = '') => {
     /**
      * Écrire votre code ici
      */
+    try {
+        const reponse = await fetch(
+            'http://universities.hipolabs.com/search?name=' +
+                recherche +
+                '&country=canada'
+        );
+        const universites = (await reponse.json()) as Universite[];
+        afficherResultats(universites);
+    } catch (erreur) {
+        console.error('Erreur: ', erreur);
+    }
     console.log(recherche);
 };
 
+const afficherResultats = (universites: Universite[]) => {
+    let html = '';
+    console.log(universites[0]);
+    for (let cpt = 0; cpt < universites.length; cpt++) {
+        html +=
+            "<li><a href='" +
+            universites[cpt]['web_pages'] +
+            "'>" +
+            universites[cpt]['name'] +
+            '</a></li>';
+    }
+    refResultatRecherche.innerHTML = html;
+};
 refChampRechercher.addEventListener('input', (event: InputEvent) => {
     rechercherUniversitesCanadiennes(refChampRechercher.value);
 });
